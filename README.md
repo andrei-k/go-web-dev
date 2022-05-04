@@ -1,4 +1,4 @@
-# Web Development playground in Go
+# Web Development Playground in Go
 
 ## Usage
 
