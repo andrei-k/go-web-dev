@@ -15,7 +15,11 @@ func init() {
 }
 
 func main() {
-	names := []string{"Mary", "Bob", "Sam"}
+	names := map[string]string{
+		"1": "Mary",
+		"2": "Bob",
+		"3": "Sam",
+	}
 
 	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", names)
 	if err != nil {
