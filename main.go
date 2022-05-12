@@ -3,15 +3,32 @@ package main
 import (
 	"log"
 	"os"
+	"strings"
 	"text/template"
 )
 
 // tpl is a container holding all the parsed templates
 var tpl *template.Template
 
+// Create a FuncMap to register functions
+// "uc" is what the func will be called in the template
+// "uc" is the ToUpper func from package strings
+// "ft" is a custom func
+// "ft" slices a string and returns the first three characters
+var fm = template.FuncMap{
+	"uc": strings.ToUpper,
+	"ft": firstThree,
+}
+
+func firstThree(s string) string {
+	s = strings.TrimSpace(s)
+	s = s[:3]
+	return s
+}
+
 func init() {
 	// Must() does error checking and returns the template
-	tpl = template.Must(template.ParseGlob("templates/*"))
+	tpl = template.Must(template.New("").Funcs(fm).ParseGlob("templates/*"))
 }
 
 type person struct {
