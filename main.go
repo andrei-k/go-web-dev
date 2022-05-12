@@ -14,14 +14,19 @@ func init() {
 	tpl = template.Must(template.ParseGlob("templates/*"))
 }
 
+type person struct {
+	Name string
+	Age  int
+}
+
 func main() {
-	names := map[string]string{
-		"1": "Mary",
-		"2": "Bob",
-		"3": "Sam",
+
+	person := person{
+		Name: "Gopher",
+		Age:  4,
 	}
 
-	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", names)
+	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", person)
 	if err != nil {
 		log.Fatalln(err)
 	}
