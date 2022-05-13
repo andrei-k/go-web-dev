@@ -7,10 +7,7 @@
 	<title>Hello</title>
 </head>
 <body>
-	<ul>
-		{{range .}}
-		<li>{{uc .Name}} - {{ft .Name}} - {{.Age}}</li>
-		{{end}}
-	</ul>
+	<p>Without date formatting: {{.}}</p>
+	<p>With date formatting: {{fdateMDY .}}</p>
 </body>
 </html>

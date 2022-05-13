@@ -3,59 +3,34 @@ package main
 import (
 	"log"
 	"os"
-	"strings"
 	"text/template"
+	"time"
 )
 
 // tpl is a container holding all the parsed templates
 var tpl *template.Template
-
-// Create a FuncMap to register functions
-// "uc" is what the func will be called in the template
-// "uc" is the ToUpper func from package strings
-// "ft" is a custom func
-// "ft" slices a string and returns the first three characters
-var fm = template.FuncMap{
-	"uc": strings.ToUpper,
-	"ft": firstThree,
-}
-
-func firstThree(s string) string {
-	s = strings.TrimSpace(s)
-	s = s[:3]
-	return s
-}
 
 func init() {
 	// Must() does error checking and returns the template
 	tpl = template.Must(template.New("").Funcs(fm).ParseGlob("templates/*"))
 }
 
-type person struct {
-	Name string
-	Age  int
+func monthDayYear(t time.Time) string {
+	// Time.Format accepts a layout in this syntax: 01/02 03:04:05PM '06 -0700
+	// In my case, I want:
+	// day (referred to as 02)
+	// month (referred to as 01)
+	// year (referred to as 06)
+	return t.Format("02-01-2006")
+}
+
+// Create a FuncMap to register functions
+var fm = template.FuncMap{
+	"fdateMDY": monthDayYear,
 }
 
 func main() {
-
-	p1 := person{
-		Name: "Gopher",
-		Age:  4,
-	}
-
-	p2 := person{
-		Name: "Mary",
-		Age:  40,
-	}
-
-	p3 := person{
-		Name: "John",
-		Age:  18,
-	}
-
-	people := []person{p1, p2, p3}
-
-	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", people)
+	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", time.Now())
 	if err != nil {
 		log.Fatalln(err)
 	}
