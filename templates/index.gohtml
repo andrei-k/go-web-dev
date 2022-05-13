@@ -9,5 +9,6 @@
 <body>
 	<p>Without date formatting: {{.}}</p>
 	<p>With date formatting: {{fdateMDY .}}</p>
+	<p>Pipelining between functions: {{. | fdateMDY | convertString}}</p>
 </body>
 </html>

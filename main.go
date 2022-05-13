@@ -24,9 +24,14 @@ func monthDayYear(t time.Time) string {
 	return t.Format("02-01-2006")
 }
 
+func convertString(s string) string {
+	return s + "!"
+}
+
 // Create a FuncMap to register functions
 var fm = template.FuncMap{
-	"fdateMDY": monthDayYear,
+	"fdateMDY":      monthDayYear,
+	"convertString": convertString,
 }
 
 func main() {
