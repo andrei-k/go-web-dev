@@ -7,8 +7,9 @@
 	<title>Hello</title>
 </head>
 <body>
-	<p>Without date formatting: {{.}}</p>
-	<p>With date formatting: {{fdateMDY .}}</p>
-	<p>Pipelining between functions: {{. | fdateMDY | convertString}}</p>
+	<p>{{index .Words 0}}</p>
+	<p>{{index .Words 1}}</p>
+	<p>{{index .Words 2}}</p>
+	<p>{{index .Name}}</p>
 </body>
 </html>
