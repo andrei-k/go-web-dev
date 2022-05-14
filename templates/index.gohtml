@@ -7,9 +7,7 @@
 	<title>Hello</title>
 </head>
 <body>
-	<p>{{index .Words 0}}</p>
-	<p>{{index .Words 1}}</p>
-	<p>{{index .Words 2}}</p>
-	<p>{{index .Name}}</p>
+	<h1>Hello, {{.}}!</h1>
+	{{template "insert" .}}
 </body>
 </html>
