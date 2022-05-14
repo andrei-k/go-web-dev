@@ -15,8 +15,13 @@ type semester struct {
 	Courses []course
 }
 
-type cal struct {
+type year struct {
 	Fall, Spring, Summer semester
+}
+
+// This method gets passed to the template as well
+func (c course) Combine() string {
+	return c.Number + " / " + c.Name + " / " + c.Units
 }
 
 var tpl *template.Template
@@ -26,7 +31,7 @@ func init() {
 }
 
 func main() {
-	cal := cal{
+	year := year{
 		Fall: semester{
 			Term: "Fall",
 			Courses: []course{
@@ -45,7 +50,7 @@ func main() {
 		},
 	}
 
-	err := tpl.Execute(os.Stdout, cal)
+	err := tpl.Execute(os.Stdout, year)
 	if err != nil {
 		log.Fatalln(err)
 	}
