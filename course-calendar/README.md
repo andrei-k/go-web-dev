@@ -1,6 +1,6 @@
 # Course Calendar
 
-Render an HTML template that displays a course calender.
+Render HTML that displays a course calender.
 
 ## Usage
 
