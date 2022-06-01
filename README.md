@@ -1,19 +1,16 @@
-# Web Development Playground in Go
+# Playground with Go
 
-## Usage
+Personal playground where I'll experimenting with various concepts and small projects using the Go language.
 
-Run in Terminal
+## Notes
 
-```
-go mod tidy
-go run .
-```
+In VSCode, open the Command Palette and type: "Go: Install/Update Tools"<br>
+Select all checkboxes and click OK
 
-Open the following link in the browser
-http://localhost:8080/
+If the installation fails with an error like this: "xcrun: error: invalid active developer path..."
 
-Or run it in the Terminal
+Install XCode Command Line by running this command in the Terminal:
 
 ```
-curl http://localhost:8080
+xcode-select --install
 ```

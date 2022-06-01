@@ -35,17 +35,17 @@ func main() {
 		Fall: semester{
 			Term: "Fall",
 			Courses: []course{
-				{"CSCI-40", "Introduction to Programming in Go", "4"},
-				{"CSCI-130", "Introduction to Web Programming with Go", "4"},
-				{"CSCI-140", "Mobile Apps Using Go", "4"},
+				{"CS-50", "Course 1", "4"},
+				{"CS-100", "Course 2", "4"},
+				{"CS-150", "Course 3", "4"},
 			},
 		},
 		Spring: semester{
 			Term: "Spring",
 			Courses: []course{
-				{"CSCI-50", "Advanced Go", "5"},
-				{"CSCI-190", "Advanced Web Programming with Go", "5"},
-				{"CSCI-191", "Advanced Mobile Apps With Go", "5"},
+				{"CS-200", "Course 4", "5"},
+				{"CS-250", "Course 5", "5"},
+				{"CS-300", "Course 6", "5"},
 			},
 		},
 	}
