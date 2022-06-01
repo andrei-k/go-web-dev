@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stock Records</title>
+</head>
+<body>
+	<h1>Stock Records</h1>
+	{{range .}}
+	<div>
+		<p>Date: {{.Date}}</p>
+		<p>Open: {{.Open}}</p>
+		<p>High: {{.High}}</p>
+		<p>Low: {{.Low}}</p>
+		<p>Close: {{.Close}}</p>
+		<p>Volume: {{.Volume}}</p>
+		<p>Adj Close: {{.AdjClose}}</p>
+	</div>
+	{{end}}
+</body>
+</html>
