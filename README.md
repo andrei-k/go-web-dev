@@ -1,6 +1,6 @@
-# Playground with Go
+# Web Development with Go
 
-Personal playground where I'll experimenting with various concepts and small projects using the Go language.
+Personal playground where I'll experimenting with various concepts and small projects related to web development using the Go language.
 
 ## Notes
 
