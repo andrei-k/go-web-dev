@@ -1,6 +1,6 @@
 # Rock Paper Scissors Web App in Go
 
-This program was built by followed a great Udemy course: Building Modern Web Applications with Go (Golang).
+This program was built by following this great Udemy course: Building Modern Web Applications with Go (Golang).
 
 ## Usage
 
