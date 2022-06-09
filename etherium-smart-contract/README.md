@@ -45,11 +45,9 @@ abigen --abi=./build/MySmartContract.abi --bin=./build/MySmartContract.bin --pkg
 
 ---
 
-### Start Ganache
+## Deploy the Smart Contract
 
-Take note of the **Host**, **Port**, and a **Private key**.
-
-### Deploy the Smart Contract
+Start Ganache and take note of the **Host**, **Port**, and a **Private key**.  
 
 Update the `/deploy/deploy.go` file with the private key and run:
 ```console
