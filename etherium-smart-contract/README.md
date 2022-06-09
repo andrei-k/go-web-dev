@@ -1,6 +1,6 @@
 # Ethereum Smart Contract and Go
 
-Simple Smart Contract implementation with Go following this (tutorial)[https://towardsdev.com/creating-a-simple-ethereum-smart-contract-in-golang-138b9439f64e].
+Simple Smart Contract implementation with Go following this [tutorial](https://towardsdev.com/creating-a-simple-ethereum-smart-contract-in-golang-138b9439f64e).
 
 ## Setup
 
