@@ -66,7 +66,7 @@ go run .
 ```
 
 Try the following links in the browser:
-http://localhost:1323/hello
+http://localhost:1323/hello  
 http://localhost:1323/greet/bob
 
 Or run it in the Terminal:
