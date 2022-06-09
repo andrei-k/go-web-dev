@@ -12,20 +12,19 @@ brew tap ethereum/ethereum
 brew install solidity
 ```
 
-### Geth
+### Install Geth
 ```console
 brew install ethereum
 ```
 
-### Ganache
+### Install Ganache
 https://trufflesuite.com/ganache/
 
 --- 
 
-## Create Smart Contract
+## Create the Smart Contract
 
 Create the Smart Contract: `./contracts/MySmartContract.sol`
-
 
 ```console
 solc --optimize --abi ./contracts/MySmartContract.sol -o build
@@ -44,6 +43,8 @@ mkdir api
 abigen --abi=./build/MySmartContract.abi --bin=./build/MySmartContract.bin --pkg=api --out=./api/MySmartContract.go
 ```
 
+---
+
 ### Start Ganache
 
 Take note of the **Host**, **Port**, and a **Private key**.
@@ -58,6 +59,8 @@ go run .
 ```
 
 This will produce the address where the smart contract belongs.  
+
+---
 
 ## Communicate with the Blockchain
 
