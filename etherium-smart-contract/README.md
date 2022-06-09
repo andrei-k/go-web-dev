@@ -57,6 +57,8 @@ go mod tidy
 go run .
 ```
 
+This will produce the address where the smart contract belongs.  
+
 ## Communicate with the Blockchain
 
 Update the `main.go`` file with the generated address and run it.
