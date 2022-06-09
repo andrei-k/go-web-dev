@@ -65,7 +65,7 @@ go mod tidy
 go run .
 ```
 
-Try the following links in the browser:
+Try the following links in the browser:  
 http://localhost:1323/hello  
 http://localhost:1323/greet/bob
 
