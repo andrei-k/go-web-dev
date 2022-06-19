@@ -11,7 +11,6 @@ cd backend
 go run .
 ```
 
-The, open frontend/index.html in your browser.  
+Then, open `/frontend/index.html` in your browser.  
 
-The back end will be accessible through:
-http://localhost:8080/
+The back end will be accessible through: http://localhost:8080/
