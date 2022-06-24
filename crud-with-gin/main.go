@@ -26,7 +26,7 @@ func GetBooks(c *gin.Context) {
 func GetBook(c *gin.Context) {
 	bookId := c.Query("id")
 	for _, item := range books {
-		// Checks to see if a book matches the ID passed in as a parameter.
+		// Checks to see if a book matches the ID passed in as a parameter
 		if item.ID == bookId {
 			c.JSON(200, gin.H{
 				"id":     item.ID,
@@ -42,7 +42,6 @@ func GetBook(c *gin.Context) {
 }
 
 func CreateBook(c *gin.Context) {
-	// Generate a random ID for the book
 	bookId := c.Query("id")
 	bookTitle := c.Query("title")
 	bookAuthor := c.Query("author")
